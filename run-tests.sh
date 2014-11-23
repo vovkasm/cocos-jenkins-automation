@@ -2,8 +2,8 @@
 
 test_variant=$1
 
-cp $test_variant/Vagrantfile Vagrantfile
-cp $test_variant/tests.sh tests.sh
+cp automation/$test_variant/Vagrantfile Vagrantfile
+cp automation/$test_variant/tests.sh tests.sh
 
 vagrant destroy -f
 vagrant up || exit 1
