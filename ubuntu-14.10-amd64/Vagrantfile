@@ -7,7 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ffuenf/ubuntu-14.10-server-amd64"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "4192"]
-    vb.customize ["modifyvm", :id, "--cpus", "2"]
+    vb.memory = 4192
+    vb.cpus = 2
   end
 end
