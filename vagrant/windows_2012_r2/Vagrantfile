@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby : set ts=4 : set sw=4 : set sts
+
+Vagrant.configure(2) do |config|
+    config.vm.box = "windows2012r2"
+
+    config.vm.provider "virtualbox" do |vb|
+        vb.gui = true
+        vb.cpus = 4
+        vb.memory = "4096"
+    end
+
+    config.vm.provision :chef_solo do |chef|
+        chef.cookbooks_path = "../../cookbooks"
+        chef.add_recipe("windows")
+        chef.add_recipe("chocolatey")
+        chef.add_recipe("dev")
+    end
+end
