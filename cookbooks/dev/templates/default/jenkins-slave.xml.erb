@@ -1,0 +1,9 @@
+<service>
+    <id>jenkins-slave</id>
+    <name>jenkins-slave</name>
+    <description>This service runs Jenkins slave.</description>
+    <env name="JENKINS_HOME" value="<%= @jenkins_home =%>"/>
+    <executable>java</executable>
+    <arguments>-Xrs -Xmx256m -jar "<%= @jenkins_jar =%>" -name "<%= @name =%>" -username "<%= @username =%>" -password "<%= @password =%>" -labels "<%= @labels =%>"</arguments>
+    <logmode>rotate</logmode>
+</service>
