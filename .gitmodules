@@ -1,0 +1,9 @@
+[submodule "cookbooks/windows"]
+	path = windows_2012_r2/cookbooks/windows
+	url = git@github.com:opscode-cookbooks/windows.git
+[submodule "cookbooks/chocolatey"]
+	path = windows_2012_r2/cookbooks/chocolatey
+	url = git@github.com:chocolatey/chocolatey-cookbook.git
+[submodule "cookbooks/chef_handler"]
+	path = windows_2012_r2/cookbooks/chef_handler
+	url = git@github.com:opscode-cookbooks/chef_handler.git
